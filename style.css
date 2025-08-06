@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); /* você pode trocar por outra */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 40px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #00c2ff;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #008bbd;
+}
+
+/* Pulsar Animation */
+.pulsar {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 194, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 194, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 194, 255, 0);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.planos-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 20px;
+}
+
+.plano-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.plano-v2.invertido {
+  flex-direction: row-reverse;
+}
+
+.plano-v2 .imagem {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.plano-v2 .texto {
+  max-width: 500px;
+}
+
+.plano-v2 .texto h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #0099ff;
+}
+
+.plano-v2 .texto p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .plano-v2 {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .plano-v2.invertido {
+    flex-direction: column !important;
+  }
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+
+
+.formulario {
+  background: #f1f1f1;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-box {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #0099ff;
+}
+
+.form-box p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input,
+.form-box button {
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-box input {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.form-box button {
+  background: #0099ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover {
+  background: #007acc;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.btn-pulsar {
+  animation: pulsar 2s infinite;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-pulsar:hover {
+  background-color: #0056b3;
+}
+
+
